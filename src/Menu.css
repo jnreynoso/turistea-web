@@ -5,6 +5,7 @@ nav {
   display: block;
   margin: 0;
   overflow: hidden;
+  padding: 0 15%;
 }
 nav ul {
   margin: 0;
