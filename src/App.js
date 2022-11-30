@@ -37,8 +37,8 @@ const HomePage = () => {
 
   useEffect(() => {
     axios.get('https://us-central1-nodevs.cloudfunctions.net/fastifyFunction/attractions')
-      .then(function ({ data: { payload }}) {
-        setAttractions(payload)
+      .then(function ({ data }) {
+        setAttractions(data)
       })
       .catch(function (error) {
         console.log(error);
@@ -47,28 +47,7 @@ const HomePage = () => {
         // always executed
       });
   },[])
-  const data = [
-    {
-      img: 'https://sorprendete.pe/wp-content/uploads/2021/11/NOTA-MANCORA-02.jpg',
-      title: 'Mancora',
-      description: 'Esta es una playa'
-    },
-    {
-      img: 'https://sorprendete.pe/wp-content/uploads/2021/11/NOTA-MANCORA-02.jpg',
-      title: 'Mancora',
-      description: 'Esta es una playa'
-    },
-    {
-      img: 'https://sorprendete.pe/wp-content/uploads/2021/11/NOTA-MANCORA-02.jpg',
-      title: 'Mancora',
-      description: 'Esta es una playa'
-    },
-    {
-      img: 'https://sorprendete.pe/wp-content/uploads/2021/11/NOTA-MANCORA-02.jpg',
-      title: 'Mancora',
-      description: 'Esta es una playa'
-    }
-  ]
+  
   return(
     <>
       <section style={{padding: '0% 0%', maxHeight:'700px'}}>
